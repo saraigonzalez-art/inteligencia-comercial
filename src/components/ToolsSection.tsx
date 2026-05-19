@@ -134,10 +134,6 @@ const tools = [
   },
 ];
 
-const ToolsSection = () => (
-  <section id="herramientas" >
-    
-  </section>
-);
+const ToolsSection = () => null;
 
 export default ToolsSection;

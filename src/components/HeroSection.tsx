@@ -4,13 +4,12 @@ import { useEffect, useState } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { title } from "process";
 
 const neonPanelBase =
-  "border border-[#facc15]/60 bg-white/92 backdrop-blur-md shadow-[0_0_0_1px_rgba(250,204,21,0.15),0_12px_26px_rgba(22,101,52,0.16)]";
+  "border border-[#facc15] bg-[#ffe066] shadow-[0_10px_22px_-18px_rgba(22,101,52,0.35)]";
 
 const neonButtonBase =
-  "rounded-[28px] px-8 py-5 text-left transition duration-300 hover:shadow-[0_0_0_1px_rgba(255,209,0,0.25),0_0_22px_rgba(0,75,141,0.72),0_0_44px_rgba(255,209,0,0.18)]";
+  "rounded-[18px] px-5 py-2.5 text-left transition duration-300 hover:brightness-95";
 
 const neonLinkBase =
   "block rounded-2xl border border-[#bbf7d0] bg-white p-3 text-sm font-medium text-[#166534] shadow-[0_0_0_1px_rgba(22,101,52,0.06),0_8px_16px_rgba(22,101,52,0.08)] transition hover:border-[#facc15] hover:bg-[#fefce8] hover:text-[#166534]";
@@ -140,7 +139,6 @@ const slides = [
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [showRubrosModal, setShowRubrosModal] = useState(false);
   const [openPanel, setOpenPanel] = useState<string | null>(null);
 
   useEffect(() => {
@@ -172,151 +170,137 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="relative mt-[72px] flex min-h-[calc(85vh-72px)] items-center justify-center overflow-hidden px-4 pb-8 pt-16 sm:px-6 md:mt-[76px] md:min-h-[calc(85vh-76px)] md:pt-20"
+        className="relative mt-14 overflow-hidden px-4 pb-8 pt-6 sm:px-6 md:mt-16 md:pt-6"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={slides[current].id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="absolute inset-0"
-          >
-            <img
-              src={slides[current].image}
-              alt={slides[current].title}
-              className={`h-full w-full object-cover transition-transform duration-500 ${
-                slides[current].imageClassName ?? ""
-              }`}
-            />
-            
-          </motion.div>
-        </AnimatePresence>
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={slides[current].id}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.55 }}
+              className="overflow-hidden rounded-[28px] border border-[#0b7d45] shadow-[0_18px_42px_-30px_rgba(0,0,0,0.45)]"
+            >
+              <div className="grid min-h-[420px] grid-cols-1 lg:grid-cols-2">
+                <div className="flex flex-col justify-center bg-[#008f52] px-7 py-10 text-white sm:px-10 lg:px-12">
+                  <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#ffe48d]">
+                    Vicepresidencia Canales Presenciales
+                  </p>
 
-        <div className="relative z-10 mx-auto -mt-8 max-w-6xl px-2 text-center text-white sm:px-6 md:-mt-10">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#FFD100] [text-shadow:0_0_10px_rgba(255,209,0,0.75)]">
-            Vicepresidencia Canales Presenciales
-          </p>
+                  <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+                    {slides[current].title}
+                  </h1>
+                  <p className="mt-4 text-base leading-relaxed text-white/95 sm:text-lg">
+                    {slides[current].description}
+                  </p>
 
-          <h1 className="text-3xl font-bold leading-tight text-[#166534] [text-shadow:0_2px_8px_rgba(255,255,255,0.85)] sm:text-4xl md:text-6xl">
-            {slides[current].title}
-          </h1>
-          <p className="mt-4 text-base text-[#0f0f0f] [text-shadow:0_1px_6px_rgba(255,255,255,0.75)] sm:mt-6 sm:text-lg">
-            {slides[current].description}
-          </p>
-
-          <div className="mt-8 flex w-full justify-center sm:mt-12">
-            {slides[current].estructura ? (
-              <div className="grid w-full max-w-6xl gap-6 md:grid-cols-3">
-                {slides[current].estructura.map((section, i) => (
-                  <div key={i} className="flex flex-col">
-                    <button
-                      type="button"
-                      onClick={() => togglePanel(`estructura-${current}-${i}`)}
-                      className={`flex items-center justify-between ${neonButtonBase} ${neonPanelBase} ${section.color}`}
-                    >
-                      <span className="text-lg font-bold text-[#166534] md:text-xl">
-                        {section.titulo}
-                      </span>
-                      <ChevronDown
-                        className={`h-5 w-5 text-[#ca8a04] transition-transform duration-200 ${
-                          openPanel === `estructura-${current}-${i}` ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    {openPanel === `estructura-${current}-${i}` && (
-                      <div className={`mt-4 space-y-3 rounded-[28px] p-6 text-[#166534] ${neonPanelBase}`}>
-                        {section.items.map((item, j) => (
-                          <a
-                            key={j}
-                            href={item.link}
-                            className={neonLinkBase}
-                          >
-                            {item.nombre}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            ) : slides[current].reportesEstructura ? (
-              <div className="w-full max-w-6xl">
-                <div className="grid gap-6 md:grid-cols-3">
-                  {slides[current].reportesEstructura.map((section, i) => (
-                    <div key={i} className="flex flex-col">
-                      <button
-                        type="button"
-                        onClick={() => togglePanel(`reportes-${current}-${i}`)}
-                        className={`flex items-center justify-between ${neonButtonBase} ${neonPanelBase} ${section.color}`}
+                  {slides[current].buttonText &&
+                    (slides[current].buttonLink.startsWith("/") ? (
+                      <Link
+                        to={slides[current].buttonLink}
+                        className="mt-8 inline-flex w-fit rounded-full bg-[#ffe066] px-6 py-3 text-sm font-bold text-[#166534] transition hover:brightness-95"
                       >
-                        <span className="text-lg font-bold text-[#166534] md:text-xl">
-                          {section.titulo}
-                        </span>
-                        <ChevronDown
-                          className={`h-5 w-5 text-[#ca8a04] transition-transform duration-200 ${
-                            openPanel === `reportes-${current}-${i}` ? "rotate-180" : ""
-                          }`}
-                        />
-                      </button>
+                        {slides[current].buttonText}
+                      </Link>
+                    ) : (
+                      <a
+                        href={slides[current].buttonLink}
+                        className="mt-8 inline-flex w-fit rounded-full bg-[#ffe066] px-6 py-3 text-sm font-bold text-[#166534] transition hover:brightness-95"
+                      >
+                        {slides[current].buttonText}
+                      </a>
+                    ))}
 
-                      {openPanel === `reportes-${current}-${i}` && (
-                        <div className={`mt-4 space-y-3 rounded-[28px] p-6 text-[#166534] ${neonPanelBase}`}>
-                          {section.items.map((item, j) => (
-  <a
-    key={j}
-    href={item.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={neonLinkBase}
-  >
-    {item.nombre}
-  </a>
-))}
+                  {(slides[current].estructura || slides[current].reportesEstructura) && (
+                    <div className="mt-8">
+                      {slides[current].estructura ? (
+                        <div id="tableros-consulta" className="grid max-w-[340px] gap-4">
+                          {slides[current].estructura.map((section, i) => (
+                            <div key={i} className="flex flex-col">
+                              <button
+                                type="button"
+                                onClick={() => togglePanel(`estructura-${current}-${i}`)}
+                                className={`flex items-center justify-between ${neonButtonBase} ${neonPanelBase} ${section.color}`}
+                              >
+                                <span className="text-sm font-bold text-[#166534] md:text-base">
+                                  {section.titulo}
+                                </span>
+                                <ChevronDown
+                                  className={`h-3.5 w-3.5 text-[#166534] transition-transform duration-200 ${
+                                    openPanel === `estructura-${current}-${i}` ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </button>
+
+                              {openPanel === `estructura-${current}-${i}` && (
+                                <div className={`mt-3 space-y-3 rounded-[24px] p-4 text-[#166534] ${neonPanelBase}`}>
+                                  {section.items.map((item, j) => (
+                                    <a key={j} href={item.link} className={neonLinkBase}>
+                                      {item.nombre}
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
                         </div>
-                      )}
+                      ) : slides[current].reportesEstructura ? (
+                        <div id="reportes-consulta" className="grid max-w-[340px] gap-4">
+                          {slides[current].reportesEstructura.map((section, i) => (
+                            <div key={i} className="flex flex-col">
+                              <button
+                                type="button"
+                                onClick={() => togglePanel(`reportes-${current}-${i}`)}
+                                className={`flex items-center justify-between ${neonButtonBase} ${neonPanelBase} ${section.color}`}
+                              >
+                                <span className="text-sm font-bold text-[#166534] md:text-base">
+                                  {section.titulo}
+                                </span>
+                                <ChevronDown
+                                  className={`h-3.5 w-3.5 text-[#166534] transition-transform duration-200 ${
+                                    openPanel === `reportes-${current}-${i}` ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </button>
+
+                              {openPanel === `reportes-${current}-${i}` && (
+                                <div className={`mt-3 space-y-3 rounded-[24px] p-4 text-[#166534] ${neonPanelBase}`}>
+                                  {section.items.map((item, j) => (
+                                    <a
+                                      key={j}
+                                      href={item.link}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className={neonLinkBase}
+                                    >
+                                      {item.nombre}
+                                    </a>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
-                  ))}
-                  {/* Modal Rubros Transporte/Premios */}
-                 
+                  )}
                 </div>
 
-                {slides[current].buttonText && slides[current].buttonLink && (
-                  <div className="mt-6 flex justify-center">
-                    <a
-                      href={slides[current].buttonLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-h-[46px] items-center justify-center rounded-full bg-[#FFD100] px-6 py-2.5 text-center text-sm font-bold text-[#166534] transition hover:scale-105 hover:bg-[#f3c900]"
-                    >
-                      <span className="leading-snug">{slides[current].buttonText}</span>
-                    </a>
-                  </div>
-                )}
+                <div className="relative min-h-[260px] lg:min-h-full">
+                  <img
+                    src={slides[current].image}
+                    alt={slides[current].title}
+                    className={`h-full w-full object-cover transition-transform duration-500 ${
+                      slides[current].imageClassName ?? ""
+                    }`}
+                  />
+                </div>
               </div>
-            ) : (
-              slides[current].buttonText &&
-              (slides[current].buttonLink.startsWith("/") ? (
-                <Link
-                  to={slides[current].buttonLink}
-                  className="rounded-full bg-[#FFD100] px-5 py-2.5 text-sm font-bold text-[#166534] transition hover:scale-105 hover:bg-[#f3c900]"
-                >
-                  {slides[current].buttonText}
-                </Link>
-              ) : (
-                <a
-                  href={slides[current].buttonLink}
-                  className="rounded-full bg-[#FFD100] px-5 py-2.5 text-sm font-bold text-[#166534] transition hover:scale-105 hover:bg-[#f3c900]"
-                >
-                  {slides[current].buttonText}
-                </a>
-              ))
-            )}
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         <button

@@ -57,29 +57,6 @@ const InfoBlockCard = ({ block }: { block: InfoBlock }) => (
   </div>
 );
 
-const ChannelsSection = () => (
-  <section className="bg-white py-20 px-6">
-    <div className="mx-auto max-w-7xl">
-      
-      <Tabs defaultValue="gh" className="w-full">
-        
-        <TabsContent value="gh">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {ghInfo.map((block) => (
-              <InfoBlockCard key={block.title} block={block} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="aa">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {aaInfo.map((block) => (
-              <InfoBlockCard key={block.title} block={block} />
-            ))}
-          </div>
-        </TabsContent>
-      </Tabs>
-    </div>
-  </section>
-);
+const ChannelsSection = () => null;
 
 export default ChannelsSection;

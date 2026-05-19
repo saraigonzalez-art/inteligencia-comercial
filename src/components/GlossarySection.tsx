@@ -7,6 +7,7 @@ import {
   Scale,
   ShieldCheck,
 } from "lucide-react";
+import { useState } from "react";
 
 interface GlossaryTerm {
   name: string;
@@ -366,7 +367,13 @@ const accentStyles = {
   },
 };
 
-const GlossarySection = () => (
+const GlossarySection = () => {
+  const [selectedCategory, setSelectedCategory] = useState(navItems[0]?.id ?? "");
+  const activeCategory =
+    glossaryCategories.find((category) => category.id === selectedCategory) ??
+    glossaryCategories[0];
+
+  return (
   <section id="glosario" className="scroll-mt-24 bg-[#F5F5F5] px-6 py-20">
     <div className="mx-auto max-w-7xl">
       <div className="mx-auto mb-16 max-w-3xl text-center">
@@ -388,16 +395,19 @@ const GlossarySection = () => (
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    className="group flex items-center gap-3 rounded-2xl px-4 py-3 transition hover:bg-slate-50"
+                  <button
+                    type="button"
+                    onClick={() => setSelectedCategory(item.id)}
+                    className={`group flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left transition hover:bg-slate-50 ${
+                      selectedCategory === item.id ? "bg-slate-50" : ""
+                    }`}
                   >
                     <span className={item.tone}>{item.icon}</span>
                     <span className="text-sm font-medium text-slate-700 transition group-hover:text-slate-900">
                       {item.label}
                     </span>
                     <ChevronRight className="ml-auto h-4 w-4 text-slate-300 transition group-hover:text-slate-500" />
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -405,7 +415,8 @@ const GlossarySection = () => (
         </aside>
 
         <div className="space-y-14 lg:col-span-9">
-          {glossaryCategories.map((category) => {
+          {(() => {
+            const category = activeCategory;
             const style = accentStyles[category.accent as keyof typeof accentStyles];
 
             return (
@@ -450,13 +461,14 @@ const GlossarySection = () => (
                 </div>
               </section>
             );
-          })}
+          })()}
 
           
         </div>
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default GlossarySection;

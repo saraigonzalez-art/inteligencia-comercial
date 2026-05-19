@@ -26,11 +26,6 @@ const Cta = ({ href, internal, label }: { href: string; internal?: boolean; labe
   );
 };
 
-const HomePortalSections = () => (
-  <section id="inicio" className="bg-[#F5F5F5] px-6 py-20">
-    <div className="mx-auto max-w-7xl">
-    </div>
-  </section>
-);
+const HomePortalSections = () => null;
 
 export default HomePortalSections;

@@ -332,11 +332,11 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="scroll-mt-24 bg-white px-4 py-16 font-sans sm:px-6 lg:px-8"
+      className="scroll-mt-24 bg-[#f3f4f6] px-4 py-16 font-sans sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 text-center md:text-bold">
-          <h2 className="mb-2 text-3xl font-bold text-[#006847]">
+        <div className="mb-10 text-center">
+          <h2 className="mb-2 text-4xl font-bold text-[#007a57] md:text-5xl">
             Preguntas Frecuentes
           </h2>
         </div>
@@ -354,27 +354,27 @@ export default function FAQSection() {
                 return (
                   <div
                     key={faq.id}
-                    className={`overflow-hidden rounded-xl border bg-white transition-all duration-200 ${
+                    className={`overflow-hidden rounded-md border bg-white transition-all duration-200 ${
                       isOpen
-                        ? "border-teal-300 shadow-md ring-1 ring-teal-100"
-                        : "border-slate-200 hover:border-slate-300"
+                        ? "border-[#008f52] shadow-sm"
+                        : "border-[#008f52] hover:border-[#007a57]"
                     }`}
                   >
                     <button
-                      className="flex w-full items-center justify-between px-5 py-4 text-left focus:outline-none"
+                      className="flex w-full items-center justify-between px-5 py-5 text-left focus:outline-none"
                       onClick={() => toggleQuestion(faq.id)}
                     >
                       <span
-                        className={`pr-4 text-sm font-medium md:text-base ${
-                          isOpen ? "text-teal-900" : "text-slate-700"
+                        className={`pr-4 text-base font-semibold md:text-lg ${
+                          isOpen ? "text-[#1f2937]" : "text-[#1f2937]"
                         }`}
                       >
                         {faq.question}
                       </span>
 
-                      <div className="flex-shrink-0 text-slate-400">
+                      <div className="flex-shrink-0 text-[#6b7280]">
                         {isOpen ? (
-                          <ChevronUp className="h-5 w-5 text-teal-600" />
+                          <ChevronUp className="h-5 w-5 text-[#6b7280]" />
                         ) : (
                           <ChevronDown className="h-5 w-5" />
                         )}
