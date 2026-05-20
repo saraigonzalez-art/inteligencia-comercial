@@ -233,7 +233,7 @@ const glossaryCategories: GlossaryCategory[] = [
   ],
 },
   {
-    id: "facturacion",
+    id: "compensacion",
     title: "Esquemas de Compensación y Pago",
     icon: <FileSpreadsheet className="h-5 w-5" />,
     accent: "green",

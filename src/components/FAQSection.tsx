@@ -20,7 +20,7 @@ const faqData: {
     id: 2,
     category: "Estrategia y gestion",
     question:
-      "¿¿Con quién puedo tratar temas relacionados con cada canal de ventas?",
+      "¿Con quién puedo tratar temas relacionados con cada canal de ventas?",
     answer: (
       <>
         <div className="space-y-4">
