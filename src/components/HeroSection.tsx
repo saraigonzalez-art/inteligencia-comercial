@@ -1,5 +1,6 @@
 import logo from "../assets/Logo.png";
-import img from "../assets/img.jpeg.png";
+import tablerosConsultaImg from "../assets/tableros-consulta.jpeg";
+import reportesImg from "../assets/reportes.jpeg";
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -19,17 +20,17 @@ const slides = [
     id: 1,
     image:
       "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=2070&q=80",
-    imageClassName: "",
-    title: "Bienvenido al Centro de Inteligencia Presenciales",
+    imageClassName: "object-cover object-center",
+    title: "Bienvenido al site de Canales Presenciales",
     description:
       "Un acceso más claro a información, tableros, reportes y recursos de la Vicepresidencia de Canales Presenciales.",
-    buttonText: "Comenzar",
+    
     buttonLink: "#herramientas",
   },
   {
     id: 2,
-    image: "/tableros.jpeg",
-    imageClassName: "object-contain scale-85",
+    image: tablerosConsultaImg,
+    imageClassName: "object-cover object-center",
     title: "Tableros de consulta",
     description:
       "Accede a dashboards estratégicos con métricas clave para la toma de decisiones comerciales.",
@@ -86,7 +87,8 @@ const slides = [
   },
   {
     id: 3,
-    image: img,
+    image: reportesImg,
+    imageClassName: "object-cover object-center",
     title: "Reportes",
     description:
       "Diligencia los formularios de reporte segun tu canal.",
@@ -184,7 +186,7 @@ const HeroSection = () => {
               transition={{ duration: 0.55 }}
               className="overflow-hidden rounded-[28px] border border-[#0b7d45] shadow-[0_18px_42px_-30px_rgba(0,0,0,0.45)]"
             >
-              <div className="grid min-h-[420px] grid-cols-1 lg:grid-cols-2">
+              <div className="grid min-h-[420px] grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="flex flex-col justify-center bg-[#008f52] px-7 py-10 text-white sm:px-10 lg:px-12">
                   <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#ffe48d]">
                     Vicepresidencia Canales Presenciales
@@ -197,20 +199,20 @@ const HeroSection = () => {
                     {slides[current].description}
                   </p>
 
-                  {slides[current].buttonText &&
+                  {slides[current].buttonLink &&
                     (slides[current].buttonLink.startsWith("/") ? (
                       <Link
                         to={slides[current].buttonLink}
                         className="mt-8 inline-flex w-fit rounded-full bg-[#ffe066] px-6 py-3 text-sm font-bold text-[#166534] transition hover:brightness-95"
                       >
-                        {slides[current].buttonText}
+                        
                       </Link>
                     ) : (
                       <a
                         href={slides[current].buttonLink}
-                        className="mt-8 inline-flex w-fit rounded-full bg-[#ffe066] px-6 py-3 text-sm font-bold text-[#166534] transition hover:brightness-95"
+                        
                       >
-                        {slides[current].buttonText}
+                        
                       </a>
                     ))}
 
@@ -289,7 +291,7 @@ const HeroSection = () => {
                   )}
                 </div>
 
-                <div className="relative min-h-[260px] lg:min-h-full">
+                <div className="relative min-h-[200px] lg:min-h-full">
                   <img
                     src={slides[current].image}
                     alt={slides[current].title}

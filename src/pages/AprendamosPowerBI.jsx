@@ -712,7 +712,7 @@ const AprendamosPowerBI = () => {
               </div>
 
               <div id="detalle-polizás" style={{ marginBottom: 20 }}>
-                <p style={{ ...styles.p, fontWeight: 'bold', marginBottom: 8 }}>5, 6 y 7. Detalle Pólizas NN / RE_CAN / GR'S:</p>
+                <p style={{ ...styles.p, fontWeight: 'bold', marginBottom: 8 }}> Detalle Pólizas NN / RE_CAN / GR'S:</p>
                 <p style={styles.p}>Auditoría y revisión línea a línea. Estas páginas son tablas granulares que muestran el Número de Póliza, Nombre del Cliente, Asesor, Clave, y Prima.</p>
               </div>
 

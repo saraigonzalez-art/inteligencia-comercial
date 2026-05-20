@@ -208,7 +208,7 @@ function Estructura() {
                 Donde reportar: <span style={styles.reportBadge}>Formulario oficial</span>
               </p>
               <a
-                href="https://forms.gle/8gCPHzqZD9whWNfB8"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeDIwUWvJRPv3PHj-6Ajir7e5knH0JCmkh8m2VyU7F6zXsIsg/viewform"
                 target="_blank"
                 rel="noreferrer"
                 style={styles.reportButton}

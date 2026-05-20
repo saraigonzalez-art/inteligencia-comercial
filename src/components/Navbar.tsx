@@ -83,16 +83,16 @@ const searchItems = [
   { label: "Tablero Asesor A&A", type: "route", value: "/aa/tablero", category: "Tableros" },
   { label: "Estrategia Comercial", type: "route", value: "/aa/estrategia", category: "Tableros" },
   { label: "Registro Individual", type: "route", value: "/registro-individual", category: "Navegacion" },
-  { label: "Presentacion", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit#slide=id.p1", category: "Compensacion" },
-  { label: "Director Comercial", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_503#slide=id.g3936da25e3f_0_503", category: "Compensacion" },
-  { label: "Director de Ventas y Relacionamiento", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_485#slide=id.g3936da25e3f_0_485", category: "Compensacion" },
-  { label: "Asesor de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g39366069afe_0_10818#slide=id.g39366069afe_0_10818", category: "Compensacion" },
-  { label: "Relacionistas y Vinculadores", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_0#slide=id.g3936da25e3f_0_0", category: "Compensacion" },
-  { label: "Convencion Nacional de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_511#slide=id.g3936da25e3f_0_511", category: "Compensacion" },
-  { label: "Compensacion A&A", type: "external", value: "https://docs.google.com/presentation/d/1DMWizD57AQ8RxwahXGy_jGSV_jvcZ8BYaqf8SG5f_TI/edit?slide=id.g396afe731a1_4_0#slide=id.g396afe731a1_4_0", category: "Compensacion" },
-  { label: "Sobre Comisiones Autos", type: "info", value: "#", category: "Compensacion" },
-  { label: "Sobre Comisiones vida", type: "info", value: "#", category: "Compensacion" },
-  { label: "Concurso Nacional de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1DMWizD57AQ8RxwahXGy_jGSV_jvcZ8BYaqf8SG5f_TI/edit?slide=id.g396afe731a1_4_0#slide=id.g396afe731a1_4_0", category: "Compensacion" },
+  { label: "Presentacion", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit#slide=id.p1", category: "Compensación" },
+  { label: "Director Comercial", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_503#slide=id.g3936da25e3f_0_503", category: "Compensación" },
+  { label: "Director de Ventas y Relacionamiento", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_485#slide=id.g3936da25e3f_0_485", category: "Compensación" },
+  { label: "Asesor de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g39366069afe_0_10818#slide=id.g39366069afe_0_10818", category: "Compensación" },
+  { label: "Relacionistas y Vinculadores", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_0#slide=id.g3936da25e3f_0_0", category: "Compensación" },
+  { label: "Convencion Nacional de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1J4sO92Z1T4rY_lnu64jDXRVT2eXG-HpyDZVXt6Xo6_s/edit?slide=id.g3936da25e3f_0_511#slide=id.g3936da25e3f_0_511", category: "Compensación" },
+  { label: "Compensación A&A", type: "external", value: "https://docs.google.com/presentation/d/1DMWizD57AQ8RxwahXGy_jGSV_jvcZ8BYaqf8SG5f_TI/edit?slide=id.g396afe731a1_4_0#slide=id.g396afe731a1_4_0", category: "Compensación" },
+  { label: "Sobre Comisiones Autos", type: "info", value: "#", category: "Compensación" },
+  { label: "Sobre Comisiones vida", type: "info", value: "#", category: "Compensación" },
+  { label: "Concurso Nacional de Ventas", type: "external", value: "https://docs.google.com/presentation/d/1DMWizD57AQ8RxwahXGy_jGSV_jvcZ8BYaqf8SG5f_TI/edit?slide=id.g396afe731a1_4_0#slide=id.g396afe731a1_4_0", category: "Compensación" },
   { label: "Que es Power BI", type: "route", value: "/aprendamos-powerbi", category: "Aprendamos Power BI" },
   { label: "Como solicitar acceso", type: "route", value: "/aprendamos-powerbi", category: "Aprendamos Power BI" },
   { label: "Tips de navegacion", type: "route", value: "/aprendamos-powerbi", category: "Aprendamos Power BI" },
@@ -340,7 +340,7 @@ const Navbar = () => {
                     </h4>
 
                     <p className="mt-2 text-xs leading-relaxed text-gray-600">
-                      Sistema que permite consultar las polizas activas y canceladas de Seguros Bolivar.
+                      Sistema que permite consultar las pólizas activas y canceladas de Seguros Bolívar.
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
@@ -364,7 +364,7 @@ const Navbar = () => {
                     </h4>
 
                     <p className="mt-2 text-xs leading-relaxed text-gray-600">
-                      Catalogo de Servicios de TI de Seguros Bolivar para el reporte de incidencias tecnologicas.
+                      Catálogo de Servicios de TI de Seguros Bolívar para el reporte de incidencias tecnológicas.
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
@@ -387,7 +387,7 @@ const Navbar = () => {
                     </h4>
 
                     <p className="mt-2 text-xs leading-relaxed text-gray-600">
-                      Una intranet de empresa es una red privada y digital, segura y de uso exclusivo para empleados, que funciona como un espacio de trabajo centralizado para compartir informacion.
+                     Una intranet de empresa es una red privada y digital, segura y de uso exclusivo para empleados, que funciona como un espacio de trabajo centralizado para compartir información.
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
@@ -411,7 +411,7 @@ const Navbar = () => {
                     </h4>
 
                     <p className="mt-2 text-xs leading-relaxed text-gray-600">
-                      Sistema de administracion y mitigacion efectiva del riesgo asociado a los procesos y el riesgo legal, apoyando el cumplimiento de los objetivos misionales y evitando perdidas asociadas a los factores de riesgo operacional, internos y externos.
+                      Sistema de administración y mitigación efectiva del riesgo asociado a los procesos y el riesgo legal, apoyando el cumplimiento de los objetivos misionales y evitando pérdidas asociadas a los factores de riesgo operacional, internos y externos.
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
@@ -424,7 +424,7 @@ const Navbar = () => {
                     </h4>
 
                     <p className="mt-2 text-xs leading-relaxed text-gray-600">
-                      Sistema de informacion de Seguros Bolivar, que permite cotizar y emitir las polizas de los clientes.
+                      Sistema de información de Seguros Bolívar, que permite cotizar y emitir las pólizas de los clientes.
                     </p>
 
                     <div className="mt-4 flex flex-col gap-2">
@@ -476,7 +476,7 @@ const Navbar = () => {
                   <div className="border-l-2 border-gray-100 pl-4 hover:border-yellow-400 transition-colors">
                     <h4 className="text-gray-900">Compras</h4>
                     <p className="mt-1 text-xs text-gray-600">
-                      Pagina web donde se encuentra todo lo relacionado con documentos publicos, politicas de compras, procedimientos en herramientas como Coupa y CAI, reglamentos a proveedores y mas.
+                      Página web donde se encuentra todo lo relacionado con documentos públicos, políticas de compras, procedimientos en herramientas como Coupa y CAI, reglamentos a proveedores y más.
                     </p>
                     <a
                       href="https://sites.google.com/segurosbolivar.com/sitecompras/inicio/e-procurement-coupa?authuser=0"
@@ -516,7 +516,7 @@ const Navbar = () => {
                             <ExternalLink size={12} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
-                            Validacion de facturas, comprobantes de pago, gastos y presupuesto por centro de costos.
+                            Validación de facturas, comprobantes de pago, gastos y presupuesto por centro de costos.
                           </span>
                         </a>
 
@@ -531,7 +531,7 @@ const Navbar = () => {
                             <ExternalLink size={12} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
-                            Plataforma habilitada para incentivos de Tecnicos correspondiente al CNV.
+                            Plataforma habilitada para incentivos de técnicos correspondiente al CNV.
                           </span>
                         </a>
 
@@ -546,7 +546,7 @@ const Navbar = () => {
                             <ExternalLink size={12} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
-                            Solicitudes, recepcion y consulta de ordenes de compra.
+                            Solicitudes, recepción y consulta de órdenes de compra.
                           </span>
                         </a>
 
@@ -672,7 +672,7 @@ const Navbar = () => {
               }}
               className={`${desktopNavClass(bonificacionesOpen)} flex items-center gap-1`}
             >
-              Compensacion
+              Compensación
               <ChevronDown
                 className={`h-4 w-4 transition-transform duration-200 ${bonificacionesOpen ? "rotate-10" : ""
                   }`}
@@ -1031,7 +1031,7 @@ const Navbar = () => {
                 onClick={() => setMobileCompensacionOpen(!mobileCompensacionOpen)}
                 className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-medium text-[#2D8B3A] transition hover:bg-green-50"
               >
-                Compensacion
+                Compensación
                 <ChevronDown
                   className={`h-4 w-4 transition-transform duration-200 ${mobileCompensacionOpen ? "rotate-180" : ""}`}
                 />
