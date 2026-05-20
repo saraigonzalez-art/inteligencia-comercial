@@ -320,7 +320,7 @@ const Navbar = () => {
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
-                      <ExternalLink size={12} />
+                      <ExternalLink size={0} />
                     </div>
                   </button>
 
@@ -344,7 +344,7 @@ const Navbar = () => {
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
-                      <ExternalLink size={12} />
+                      <ExternalLink size={0} />
                       
                     </div>
                   </button>
@@ -368,7 +368,7 @@ const Navbar = () => {
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
-                       <ExternalLink size={12} />
+                       <ExternalLink size={0} />
                     </div>
                   </button>
 
@@ -391,7 +391,7 @@ const Navbar = () => {
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
-                      <ExternalLink size={12} />
+                      <ExternalLink size={0} />
                     </div>
                   </button>
 
@@ -415,7 +415,7 @@ const Navbar = () => {
                     </p>
 
                     <div className="mt-4 flex items-center gap-1 text-xs font-medium text-blue-600">
-                      <ExternalLink size={12} />
+                      <ExternalLink size={0} />
                     </div>
                   </button>
                   <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:border-yellow-400 hover:shadow-md">
@@ -437,10 +437,10 @@ const Navbar = () => {
                             "noopener,noreferrer"
                           )
                         }
-                        className="flex items-center justify-between rounded-lg border border-gray-200 px-3 py-2 text-xs text-blue-600 transition hover:border-yellow-400 hover:bg-gray-50"
+                        className="flex items-center justify-between rounded-lg border border-[#0e6b3a] bg-[#008f52] px-3 py-2 text-xs text-white transition hover:border-yellow-300 hover:bg-[#0a7c49]"
                       >
                         <span>Simon ventas</span>
-                        <ExternalLink size={12} />
+                        <ExternalLink size={0} />
                       </button>
 
                       <button
@@ -451,10 +451,10 @@ const Navbar = () => {
                             "noopener,noreferrer"
                           )
                         }
-                        className="flex items-center justify-between rounded-lg border border-gray-200 px-3 py-2 text-xs text-blue-600 transition hover:border-yellow-400 hover:bg-gray-50"
+                        className="flex items-center justify-between rounded-lg border border-[#0e6b3a] bg-[#008f52] px-3 py-2 text-xs text-white transition hover:border-yellow-300 hover:bg-[#0a7c49]"
                       >
                         <span>Simon cotizador</span>
-                        <ExternalLink size={12} />
+                        <ExternalLink size={0} />
                       </button>
 
                       <button
@@ -465,10 +465,10 @@ const Navbar = () => {
                             "noopener,noreferrer"
                           )
                         }
-                        className="flex items-center justify-between rounded-lg border border-gray-200 px-3 py-2 text-xs text-blue-600 transition hover:border-yellow-400 hover:bg-gray-50"
+                        className="flex items-center justify-between rounded-lg border border-[#0e6b3a] bg-[#008f52] px-3 py-2 text-xs text-white transition hover:border-yellow-300 hover:bg-[#0a7c49]"
                       >
                         <span>Simon servicio</span>
-                        <ExternalLink size={12} />
+                        <ExternalLink size={0} />
                       </button>
 
                     </div>
@@ -484,16 +484,16 @@ const Navbar = () => {
                       rel="noopener noreferrer"
                       className="mt-2 flex items-start gap-1 text-xs text-blue-600 hover:underline"
                     >
-                      sites.google.com/segurosbolivar.com/sitecompras/inicio/e-procurement-coupa <ExternalLink size={12} />
+                      sites.google.com/segurosbolivar.com/sitecompras/inicio/e-procurement-coupa <ExternalLink size={0} />
                     </a>
                     <button
                       type="button"
                       onClick={() => setAreaUsuarioOpen(!areaUsuarioOpen)}
                       className="mt-4 flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs shadow-sm transition"
                       style={{
-                        backgroundColor: "#FFB703",
-                        border: "1px solid #F59E0B",
-                        color: "#78350F",
+                        backgroundColor: "#008f52",
+                        border: "1px solid #0e6b3a",
+                        color: "#FFFFFF",
                       }}
                     >
                       Compras
@@ -513,7 +513,7 @@ const Navbar = () => {
                         >
                           <span className="flex items-center justify-between text-xs text-gray-900">
                             CAI
-                            <ExternalLink size={12} />
+                            <ExternalLink size={0} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
                             Validación de facturas, comprobantes de pago, gastos y presupuesto por centro de costos.
@@ -528,7 +528,7 @@ const Navbar = () => {
                         >
                           <span className="flex items-center justify-between text-xs text-gray-900">
                             Aprecio
-                            <ExternalLink size={12} />
+                            <ExternalLink size={0} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
                             Plataforma habilitada para incentivos de técnicos correspondiente al CNV.
@@ -543,7 +543,7 @@ const Navbar = () => {
                         >
                           <span className="flex items-center justify-between text-xs text-gray-900">
                             Coupa
-                            <ExternalLink size={12} />
+                            <ExternalLink size={0} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
                             Solicitudes, recepción y consulta de órdenes de compra.
@@ -558,7 +558,7 @@ const Navbar = () => {
                         >
                           <span className="flex items-center justify-between text-xs text-gray-900">
                             Quantum Pay
-                            <ExternalLink size={12} />
+                            <ExternalLink size={0} />
                           </span>
                           <span className="mt-1 block text-[11px] text-gray-600">
                             Bonos por tarjeta digital para compras en plataformas y comercios con pagos digitales.
