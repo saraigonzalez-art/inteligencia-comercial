@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import imgPositivosNegativos from "../assets/powerbi_jira1.png.png";
 import imgResultados from "../assets/powerbi_jira2.png.png";
 import imgCotizaciones from "../assets/powerbi_jira3.png.png";
@@ -299,11 +299,18 @@ const ImageCard = ({ src, alt }) => (
 
 const AprendamosPowerBI = () => {
   const [activeIdx, setActiveIdx] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   return (
-    <div style={styles.root}>
+    <div style={{ ...styles.root, paddingLeft: isMobile ? 0 : styles.root.paddingLeft }}>
       <button
-        style={backButtonStyle}
+        style={{ ...backButtonStyle, position: isMobile ? "absolute" : backButtonStyle.position, top: isMobile ? 10 : backButtonStyle.top, left: isMobile ? 10 : backButtonStyle.left }}
         onClick={() => window.history.back()}
         aria-label="Volver atras"
         onMouseOver={(e) => {
@@ -316,11 +323,11 @@ const AprendamosPowerBI = () => {
         {"<-"} Atras
       </button>
 
-      <aside style={sidebarStyle}>
-        <ul style={sidebarListStyle}>
+      <aside style={isMobile ? { position: "sticky", top: 0, width: "100%", height: "auto", background: "#ffffff", borderBottom: "1px solid #e9ecef", padding: "48px 10px 10px", zIndex: 30, overflowX: "auto", overflowY: "hidden" } : sidebarStyle}>
+        <ul style={isMobile ? { ...sidebarListStyle, display: "flex", gap: 8, minWidth: "max-content" } : sidebarListStyle}>
           {sidebarItems.map((item, idx) =>
             item.type === "title" ? (
-              <li key={idx} style={sidebarTitleStyle}>
+              <li key={idx} style={isMobile ? { ...sidebarTitleStyle, marginTop: 0, whiteSpace: "nowrap" } : sidebarTitleStyle}>
                 {item.label}
               </li>
             ) : (
@@ -333,7 +340,7 @@ const AprendamosPowerBI = () => {
                         : sidebarActiveStyle
                       : item.highlight
                         ? sidebarHighlightStyle
-                        : sidebarItemStyle
+                        : isMobile ? { ...sidebarItemStyle, whiteSpace: "nowrap", borderRadius: 999, padding: "8px 14px" } : sidebarItemStyle
                   }
                   onClick={() => {
                     if (item.href) {
@@ -386,12 +393,12 @@ const AprendamosPowerBI = () => {
         </ul>
       </aside>
 
-      <header style={styles.header}>
-        <h1 style={styles.h1}>Aprendamos de Power BI</h1>
-        <p style={styles.subtitle}>Guía completa para el uso de tableros en Seguros Bolívar</p>
+      <header style={{ ...styles.header, padding: isMobile ? "20px 14px" : styles.header.padding }}>
+        <h1 style={{ ...styles.h1, fontSize: isMobile ? 22 : styles.h1.fontSize, lineHeight: isMobile ? 1.2 : 1.15, letterSpacing: isMobile ? 0.5 : 1 }}>Aprendamos de Power BI</h1>
+        <p style={{ ...styles.subtitle, fontSize: isMobile ? 15 : styles.subtitle.fontSize }}>Guía completa para el uso de tableros en Seguros Bolívar</p>
       </header>
 
-      <div style={styles.container}>
+      <div style={{ ...styles.container, margin: isMobile ? "16px 10px 24px" : styles.container.margin, padding: isMobile ? 18 : styles.container.padding, borderRadius: isMobile ? 12 : styles.container.borderRadius }}>
         {/* Introducción */}
         <section id="que-es-pbi" style={styles.section}>
           <h2 style={styles.h2}>¿Qué es Power BI?</h2>
