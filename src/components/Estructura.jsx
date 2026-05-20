@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import img1 from "../assets/origramas/img.1.jpeg";
+import img2 from "../assets/origramas/img.2.jpeg";
+import img3 from "../assets/origramas/img.3.jpeg";
+import img4 from "../assets/origramas/img.4.jpeg";
+import img5 from "../assets/origramas/img.5.jpeg";
+import img6 from "../assets/origramas/img.6.jpeg";
 const estructuraImagenes = [
-  "/estructura-diagramas/pdf-page-1.png",
-  "/estructura-diagramas/pdf-page-2.png",
-  "/estructura-diagramas/pdf-page-3.png",
-  "/estructura-diagramas/pdf-page-4.png",
-  "/estructura-diagramas/pdf-page-5.png",
-  "/estructura-diagramas/pdf-page-6.png",
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
 ];
 
 const styles = {
