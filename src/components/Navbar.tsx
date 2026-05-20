@@ -136,7 +136,7 @@ const Navbar = () => {
   const desktopNavClass = (isActive: boolean) =>
     `relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
       isActive
-        ? "text-[#166534]"
+        ? "text-[#D4A017]"
         : "text-[#166534] hover:text-[#15803d]"
     }`;
 

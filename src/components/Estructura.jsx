@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import img1 from "../assets/origramas/img.1.jpeg";
-import img2 from "../assets/origramas/img.2.jpeg";
-import img3 from "../assets/origramas/img.3.jpeg";
-import img4 from "../assets/origramas/img.4.jpeg";
-import img5 from "../assets/origramas/img.5.jpeg";
-import img6 from "../assets/origramas/img.6.jpeg";
+import img1 from "../assets/origramas/Organigramas de Estructura Comercial.1.png";
+import img2 from "../assets/origramas/Organigramas de Estructura Comercial.2.png";
+import img3 from "../assets/origramas/Organigramas de Estructura Comercial.3.png";
+import img4 from "../assets/origramas/Organigramas de Estructura Comercial.4.png";
+import img5 from "../assets/origramas/Organigramas de Estructura Comercial.5.png";
+import img6 from "../assets/origramas/Organigramas de Estructura Comercial.6.png";
 const estructuraImagenes = [
   img1,
   img2,
