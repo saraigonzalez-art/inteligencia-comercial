@@ -23,7 +23,7 @@ const slides = [
     imageClassName: "object-cover object-center",
     title: "Bienvenido al site de Canales Presenciales",
     description:
-      "Un acceso más claro a información, tableros, reportes y recursos de la Vicepresidencia de Canales Presenciales.",
+      "Un acceso más claro a información, tableros, reportes y recursos de la Vicepresidencia.",
     
     buttonLink: "#herramientas",
   },
